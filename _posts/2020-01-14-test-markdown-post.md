@@ -1,103 +1,78 @@
 ---
-toc: true
+toc: false
 layout: post
-description: A minimal example of using markdown with fastpages.
+description: Ideas and commands on Emacs that I find useful. Most points come from the emacs inbuilt tutorial.
 categories: [markdown]
-title: An Example Markdown Post
----
-# Example Markdown Post
-
-## Basic setup
-
-Jekyll requires blog post files to be named according to the following format:
-
-`YEAR-MONTH-DAY-filename.md`
-
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `filename` is whatever file name you choose, to remind yourself what this post is about. `.md` is the file extension for markdown files.
-
-The first line of the file should start with a single hash character, then a space, then your title. This is how you create a "*level 1 heading*" in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line `## File names` above.
-
-## Basic formatting
-
-You can use *italics*, **bold**, `code font text`, and create [links](https://www.markdownguide.org/cheat-sheet/). Here's a footnote [^1]. Here's a horizontal rule:
-
+title: On Emacs
 ---
 
-## Lists
+# Insights
+1. Control and Meta are parallels. `C` acts on elementary structures like letters and symbols, but `M` acts on higher level structures like words and sentences.
+2. Three reasons why `C-f/b/n/p` need to be learnt - 
+	1. They work on all kinds of terminals
+	2. These tend to be faster after practice
+	3. Forms basis for more advanced commands
+3. Some commands like `C-x C-l` are disabled for beginners. Use spc to say yes.
+4. Commands starting with `C-x` mostly deal with windows, files, buffers, etc.
+5. Overridden behavior of keys is called being *electric*.
+6. Killed text can be yanked later. Deleted text cannot be yanked. Commands that remove a lot text generally kill it - so that it can be yanked if needed. Single character removals and space removals are deletions and cannot be yanked.
+7. Use `C-x C-c` when you need to logout
+8. Autosave file begins and ends with a #. To recover, `M-x recover-this-file <Ret>`
+9. Most commands do the "same job" in different modes but behave slightly differently
+10. To exit recursive editing, do esc-esc-esc. `C-g` only exits current editing level.
 
-Here's a list:
+# Commands
 
-- item 1
-- item 2
-
-And a numbered list:
-
-1. item 1
-1. item 2
-
-## Boxes and stuff
-
-> This is a quotation
-
-{% include alert.html text="You can include alert boxes" %}
-
-...and...
-
-{% include info.html text="You can include info boxes" %}
-
-## Images
-
-![]({{ site.baseurl }}/images/logo.png "fast.ai's logo")
-
-## Code
-
-You can format text and code per usual 
-
-General preformatted text:
-
-    # Do a thing
-    do_thing()
-
-Python code and output:
-
-```python
-# Prints '2'
-print(1+1)
-```
-
-    2
-
-Formatting text as shell commands:
-
-```shell
-echo "hello world"
-./some_script.sh --option "value"
-wget https://example.com/cat_photo1.png
-```
-
-Formatting text as YAML:
-
-```yaml
-key: value
-- another_key: "another value"
-```
-
-
-## Tables
-
-| Column 1 | Column 2 |
-|-|-|
-| A thing | Another thing |
-
-
-## Tweetcards
-
-{% twitter https://twitter.com/jakevdp/status/1204765621767901185?s=20 %}
-
-
-## Footnotes
-
-
-
-[^1]: This is the footnote.
-
+Command  | Action
+----------|---------
+`C-h t`  | open tutorial
+`C-v`      | scroll page down
+`M-v`      | scroll page up
+`C-f`      | move forward 1 char
+`C-b`      | move backward 1 char
+`C-n`      | move down 1 line
+`C-p`      | move up 1 line
+`C-l`      | recenter line
+`M-f`      | move forward 1 word
+`M-b`      | move backward 1 word
+`C-a`      | jump to beginning of line
+`C-e`      | jump to end of line
+`M-a`      | jump to beginning of sentence
+`M-e`      | jump to end of sentence
+`M-<`      | jump to top of file
+`M->`      | jump to end of file
+`C-u 8 C-f` | move forward 8 chars
+`M-5 M-f` | move forward 5 words
+`C-u 5 C-v` | scroll down 5 lines
+`C-g`      | cancel current command
+`C-x 1`  | one window
+`C-h k C-f` | open help pane on `C-f`
+`M-<DEL>` | delete word before cursor
+`M-d`      | delete word after cursor
+`C-k`      | kill to end of line
+`M-k`      | kill to end of sentence
+`C-<spc>` | mark start of selection
+`C-w`      | kill selection
+`M-w`      | save to kill-ring
+`C-/`, `C-_`, `C-x u`      | undo
+`C-x C-f` | visit file
+`C-x C-s` | save file
+`C-x C-b` | list buffers
+`C-x b`  | goto buffer
+`C-x s`  | save some buffers
+`C-x u`  | undo
+`M-x replace-string` | replace string
+`M-x text-mode` | enter text mode
+`M-x auto-fill-mode` | wrap lines
+`C-x f`  | set margin (=70)
+`C-s`      | incremental search
+`C-r`      | incremental search reverse
+`C-x 2`  | split window
+`C-o`      | move to other window
+`C-M-v`  | scroll other window
+`C-x 4 C-f` | find file in other window
+`C-x 5 2` | create new frame
+`C-x 5 0` | remove selected frame
+`C-h c C-f` | help on sequence commands
+`C-h f list-packages` | help on function
+`C-x h`  | select whole buffer
