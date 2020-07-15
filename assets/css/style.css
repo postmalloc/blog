@@ -442,9 +442,11 @@ table td { text-overflow: ellipsis; overflow: hidden; max-width: 15em; }
 
 h1, h2, h3, h4 { font-weight: bold !important; margin-bottom: 0.5rem !important; }
 
-pre, code { background-color: #edf7ff; border: none; }
+pre, code { background-color: #edf7ff; border: none; font-size: 14px !important; }
 
 blockquote { text-align: left; }
+
+table { font-size: 16px !important; }
 
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
 
