@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Srimukh's blog
-description: Notes from my internet explorations.
+description: Notes from my explorations.
 github_username: d3b0unce
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "blog"
@@ -94,7 +94,7 @@ plugins:
 
 # See https://jekyllrb.com/docs/pagination/
 # For pagination to work, you cannot have index.md at the root of your repo, instead you must rename this file to index.html
-paginate: 15
+paginate: 30
 paginate_path: /page:num/
 
 remote_theme: jekyll/minima

@@ -32,10 +32,15 @@ h1, h2, h3, h4 {
 pre, code {
    background-color: #edf7ff;
    border: none;
+   font-size: 14px !important;
 }
 
 blockquote {
    text-align: left;
+}
+
+table {
+   font-size: 16px !important;
 }
 // If you want to turn off dark background for syntax highlighting, comment or delete the below line.
 @import "minima/fastpages-dracula-highlight"; 
